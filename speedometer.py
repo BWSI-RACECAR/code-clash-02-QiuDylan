@@ -34,19 +34,13 @@ class Solution:
         # return type: list or bool
 
        # TODO: Write code below to return a list with the solution to the prompt
-        sum_set = [] 
-        for index in range(len(ary)):
-            counter = 1
-            while counter + index < len(ary):
-                sum = ary[index] + ary[index+counter]
-                if sum ==  target:
-                    sum_set.append(index)
-                    return sum_set
-                else: 
-                    return False
-                
-                counter += 1
+        for x in ary:
+            other = target - x
+            if other in ary:
+                return [ary.index(x), ary.index(other)]
+            return False 
         
+            
 
 
         pass
