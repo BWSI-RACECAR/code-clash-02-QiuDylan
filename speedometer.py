@@ -39,12 +39,14 @@ class Solution:
             counter = 1
             while counter + index < len(ary):
                 sum = ary[index] + ary[index+counter]
-                sum_set.append(index)
+                if sum ==  target:
+                    sum_set.append(index)
+                    return sum_set
+                else: 
+                    return False
+                
                 counter += 1
-        if sum ==  target:
-            return sum_set
-        else: 
-            return False
+        
 
 
         pass
