@@ -38,7 +38,7 @@ class Solution:
             other = target - x
             if other in ary:
                 return [ary.index(x), ary.index(other)]
-            return False 
+        return False 
         
             
 
