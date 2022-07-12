@@ -34,17 +34,17 @@ class Solution:
         # return type: list or bool
 
        # TODO: Write code below to return a list with the solution to the prompt
-        sum_set = set() # using a set to store sums of two numbers.
-        for index in range(len(ary)-1):
+        sum_set = [] 
+        for index in range(len(ary)):
             counter = 1
             while counter + index < len(ary):
                 sum = ary[index] + ary[index+counter]
-                sum_set.add(sum)
+                sum_set.append(index)
                 counter += 1
-        for number in ary:
-            if number in sum_set:
-                return sum
-        return False
+        if sum ==  target:
+            return sum_set
+        else: 
+            return False
 
 
         pass
